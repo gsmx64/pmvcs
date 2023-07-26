@@ -6,9 +6,9 @@ Python MVC Shell Framework Package (PMVCS) es un pequeño framework para proyect
 
 ![PMVCS inicio selección de idioma](/docs/images/pmvcs-intro-language.png)
 
-![PMVCS menus para múltiples módulos](/docs/images/pmvcs-en-menus.png)
+![PMVCS menus para múltiples módulos](/docs/images/pmvcs-es-menus.png)
 
-![PMVCS corriendo un módulo](/docs/images/pmvcs-en-runing-module.png)
+![PMVCS corriendo un módulo](/docs/images/pmvcs-es-runing-module.png)
 
 ### Instalar con pip3
 
@@ -173,6 +173,140 @@ class ExampleHelper(BaseHelper):
 ```
 
 
+### Obtener constantes de configuration de config.ini:
+
+Obtiene una constante de configuración en tipo cadena desde "OPTIONS":
+```
+Código: >>> self.cfg.get("EXAMPLE_CONSTANT", "OPTIONS")
+Retorna: This is an example value from config file
+Tipo de Valor: <class 'str'>
+```
+
+Obtiene una constante de configuración en tipo cadena desde "DEFAULT":
+```
+Código: >>> self.cfg.get("DEFAULT_TITLE", "DEFAULT")
+Retorna: Example App
+Tipo de Valor: <class 'str'>
+```
+
+Obtiene una constante de configuración en tipo entero:
+```
+Código: >>> self.cfg.get("EXAMPLE_INT", "OPTIONS", "int")
+Retorna: 8
+Tipo de Valor: <class 'int'>
+```
+
+Obtiene una constante de configuración en tipo flotate:
+```
+Código: >>> self.cfg.get("EXAMPLE_FLOAT", "OPTIONS", "float")
+Retorna: 1.57
+Tipo de Valor: <class 'float'>
+```
+
+Obtiene una constante de configuración en tipo booleano:
+```
+Código: >>> self.cfg.get("EXAMPLE_BOOLEAN", "OPTIONS", "boolean")
+Retorna: True
+Tipo de Valor: <class 'bool'>
+```
+
+Obtiene una constante de configuración en una lista:
+```
+Código: >>> self.cfg.get("EXAMPLE_LIST", "OPTIONS", "list")
+Retorna: ['1', '2']
+Tipo de Valor: <class 'list'>
+```
+
+Obtiene una constante de configuración en un diccionario:
+```
+Código: >>> self.cfg.get("EXAMPLE_DICT", "OPTIONS", "dict")
+Retorna: {'value_one': '1', 'value_two': '2'}
+Tipo de Valor: <class 'dict'>
+```
+
+
+### Obtener constantes de idioma de languages/es.ini:
+
+Obtiene la etiqueta de idioma actual:
+```
+Código: >>> self.lang.tag
+Retorna: en
+Tipo de Valor: <class 'str'>
+```
+
+Obtiene una constante de idioma:
+```
+Código: >>> self.lang.get("LANG_EXAMPLE_STRING")
+Retorna: This is an example string
+Tipo de Valor: <class 'str'>
+```
+
+Obtenga una constante de idioma pasando un valor en String-Print-Format.
+En el archivo de idioma verá por ejemplo: "El valor aquí: "{}"
+```
+Código: >>> self.lang.sprintf("LANG_EXAMPLE_SPRINTF", "3")
+Retorna: String-Print-Format value here: "3"
+Tipo de Valor: <class 'str'>
+```
+
+Obtenga una constante de idioma pasando varios valores en String-Print-Format.
+En el archivo de idioma verá por ejemplo: "Uno: "{}". Dos: "{}". Tres: "{}".
+```
+Código: >>> self.lang.sprintf("LANG_EXAMPLE_SPRINTF2", "1", "2", "3")
+Retorna: One: "1". Two: "2". Three: "3".
+Tipo de Valor: <class 'str'>
+```
+
+Traduciendo una cadena:
+```
+Código: >>> self.lang.translate(value)   -> value = 'dictionary'
+Retorna: Dictionary
+Tipo de Valor: <class 'str'>
+```
+ 
+ 
+### Uso de las funciones de vista de PMVCS
+
+Esto muestra la pancarta con el nombre de la App:
+```
+Código: >>> self.pmvcs_view.get_intro()
+```
+
+Esto muestra el mensaje de la salida:
+```
+Código: >>> self.pmvcs_view.get_exit()
+```
+
+Esto inserta un salto de línea sin print():
+```
+Código: >>> self.pmvcs_view.line_brake()
+```
+
+Esto inserta un salto de línea con print():
+```
+Código: >>> self.pmvcs_view.line_brake(True)
+```
+
+Esto inserta una pausa para presionar ENTER para comenzar:
+```
+Código: >>> self.pmvcs_view.input_start()
+```
+
+Esto inserta una pausa para presionar ENTER para continuar:
+```
+Código: >>> self.pmvcs_view.input_pause()
+```
+Esto inserta un input() de selección de opción:
+```
+Código: >>> self.pmvcs_view.input_options()
+```
+
+Esto inserta un input():
+```
+Código: >>> self.pmvcs_view.input_generic(text)
+```
+
+ 
 ## Repositorio
 
 * [Repositorio PMVCS](https://github.com/gsmx64/pmvcs)

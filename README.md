@@ -173,6 +173,141 @@ class ExampleHelper(BaseHelper):
 ```
 
 
+### Get configuration constants from config.ini:
+
+Get a configuration constant in string type from "OPTIONS":
+```
+Code: >>> self.cfg.get("EXAMPLE_CONSTANT", "OPTIONS")
+Returns: This is an example value from config file
+Value Type: <class 'str'>
+```
+
+Get a configuration constant in string type from "DEFAULT":
+```
+Code: >>> self.cfg.get("DEFAULT_TITLE", "DEFAULT")
+Returns: Example App
+Value Type: <class 'str'>
+```
+
+Get a configuration constant in integer type:
+```
+Code: >>> self.cfg.get("EXAMPLE_INT", "OPTIONS", "int")
+Returns: 8
+Value Type: <class 'int'>
+```
+
+Get a configuration constant in float type:
+```
+Code: >>> self.cfg.get("EXAMPLE_FLOAT", "OPTIONS", "float")
+Returns: 1.57
+Value Type: <class 'float'>
+```
+
+Get a configuration constant in boolean type:
+```
+Code: >>> self.cfg.get("EXAMPLE_BOOLEAN", "OPTIONS", "boolean")
+Returns: True
+Value Type: <class 'bool'>
+```
+
+Get a configuration constant in a list:
+```
+Code: >>> self.cfg.get("EXAMPLE_LIST", "OPTIONS", "list")
+Returns: ['1', '2']
+Value Type: <class 'list'>
+```
+
+Get a configuration constant in a dictionary:
+```
+Code: >>> self.cfg.get("EXAMPLE_DICT", "OPTIONS", "dict")
+Returns: {'value_one': '1', 'value_two': '2'}
+Value Type: <class 'dict'>
+```
+
+
+### Get language constants from languages/en.ini:
+
+Get current language tag:
+```
+Code: >>> self.lang.tag
+Returns: en
+Value Type: <class 'str'>
+```
+
+Get a language constant:
+```
+Code: >>> self.lang.get("LANG_EXAMPLE_STRING")
+Returns: This is an example string
+Value Type: <class 'str'>
+```
+
+Get a language constant by passing a value in String-Print-Format.
+In the language file you will see for example: "The value here: "{}"
+```
+Code: >>> self.lang.sprintf("LANG_EXAMPLE_SPRINTF", "3")
+Returns: String-Print-Format value here: "3"
+Value Type: <class 'str'>
+```
+
+Get a language constant by passing many values in String-Print-Format.
+In the language file you will see: "One: "{}". Two: "{}". Three: "{}".
+```
+Code: >>> self.lang.sprintf("LANG_EXAMPLE_SPRINTF2", "1", "2", "3")
+Returns: One: "1". Two: "2". Three: "3".
+Value Type: <class 'str'>
+```
+
+Translating a string:
+```
+Code: >>> self.lang.translate(value)   -> value = 'dictionary'
+Returns: Dictionary
+Value Type: <class 'str'>
+```
+ 
+ 
+### Using PMVCS View functions
+
+This shows the banner with the App's name:
+```
+Code: >>> self.pmvcs_view.get_intro()
+```
+
+This shows the exit message:
+```
+Code: >>> self.pmvcs_view.get_exit()
+```
+
+This inserts a line break without print():
+```
+Code: >>> self.pmvcs_view.line_brake()
+```
+
+This inserts a line break with print():
+```
+Code: >>> self.pmvcs_view.line_brake(True)
+```
+
+This inserts a pause to press ENTER to start:
+```
+Code: >>> self.pmvcs_view.input_start()
+```
+
+This inserts a pause to press ENTER to continue:
+```
+Code: >>> self.pmvcs_view.input_pause()
+```
+
+This inserts a select an option input():
+```
+Code: >>> self.pmvcs_view.input_options()
+```
+
+This inserts a select an input():
+```
+Code: >>> self.pmvcs_view.input_generic(text)
+```
+ 
+
 ## Repository
 
 * [Repository PMVCS](https://github.com/gsmx64/pmvcs)

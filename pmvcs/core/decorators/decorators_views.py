@@ -10,7 +10,7 @@ def decorate_intro(num_lines: int) -> object:
     def decorator_decorate_intro(func: str):
 
         @functools.wraps(func)
-        def wrapped_decorate_intro(self) -> list:
+        def wrapped_decorate_intro(self, *args, **kwargs) -> list:
             line = '-' * 49 + ' \n'
             message = ''
             counter_start = counter_end = 1
@@ -18,7 +18,7 @@ def decorate_intro(num_lines: int) -> object:
                 message += line
                 counter_start += 1
 
-            message += func(self)
+            message += func(self, *args, **kwargs)
 
             while counter_end <= num_lines:
                 message += line
