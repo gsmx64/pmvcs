@@ -15,12 +15,10 @@ def main(argv: Sequence[str] | None = None) -> int:
     returns functions values
     """
     parser = argparse.ArgumentParser()
-    parser.add_argument('task', type=str, help='')
-    parser.add_argument('-l', '--language', default='en', help='')
-    parser.add_argument(
-        '--version', action='version',
-        version=f'Python MVC Shell Framework Package {__version__}'
-    )
+    parser.add_argument('task', type=str, help='Usage: pmvcs-cli setup -l en / pmvcs-cli menu -l en')
+    parser.add_argument('-l', '--language', help='Usage: -l en (for english) / -l es (for spanish)')
+    parser.add_argument('-v', '--version', action='version',
+                        version=f'Python MVC Shell Framework Package {__version__}')
     args_values = parser.parse_args(argv)
 
     if args_values.language.lower() == 'es':

@@ -1,15 +1,15 @@
 [build-system]
-requires = ["setuptools>=61.0"]
+requires = ["setuptools"]
 build-backend = "setuptools.build_meta"
 
 [project]
 name = "pmvcs"
 version = "1.0.0"
+readme = "README.md"
 authors = [
   { name="Gonzalo Mahserdjian", email="gsmx64@outlook.com" },
 ]
 description = "Python MVC Shell Framework Package is a tiny framework for shell projects in Python."
-readme = "README.md"
 requires-python = ">=3.7"
 license = {text = "GNU/GPL version 3"}
 keywords = ["pmvcs", "python shell", "python mvc", "python shell framework", "python mvc", "python mvc shell framework"]
@@ -19,16 +19,23 @@ classifiers = [
     "Operating System :: OS Independent",
 ]
 
+[tool.setuptools]
+include-package-data = true
+
 [project.entry-points."pmvcs"]
 pmvcs = "pmvcs:main"
 
-[project.scripts]
-pmvcs = "pmvcs.cli:main"
+[project.entry-points."console_scripts"]
+pmvcs-cli = "pmvcs.cli:main"
 
-[tool.setuptools]
-# If there are data files included in your packages that need to be
-# installed, specify them here.
-package-data = {"pmvcs" = ["core", "setup", "tests"]}
+[tool.setuptools.packages.find]
+where = ["."]  # list of folders that contain the packages (["."] by default)
+include = ["pmvcs*", "example*", "module_unique*", "modules_base*"]
+exclude = ["app*", "tests*"]  # exclude packages matching these glob patterns (empty by default)
+namespaces = true  # to disable scanning PEP 420 namespaces (true by default)
+
+[tool.setuptools.package-data]
+pmvcs = ["pmvcs/core/setup/languages/*.ini", "pmvcs/setup/defaults/languages/*.ini", "pmvcs/setup/example/languages/*.ini"]
 
 [project.urls]
 "Homepage" = "https://github.com/gsmx64/pmvcs"

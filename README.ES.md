@@ -4,6 +4,11 @@
 
 Python MVC Shell Framework Package (PMVCS) es un pequeño framework para proyectos en shell realizados en Python.
 
+![PMVCS inicio selección de idioma](/docs/images/pmvcs-intro-language.png)
+
+![PMVCS menus para múltiples módulos](/docs/images/pmvcs-en-menus.png)
+
+![PMVCS corriendo un módulo](/docs/images/pmvcs-en-runing-module.png)
 
 ### Instalar con pip3
 
@@ -22,6 +27,10 @@ pip3 install pmvcs
 >>> python -m pmvcs.cli setup -l es
 o
 >>> python -m pmvcs.cli setup -language es
+o
+>>> pmvcs-cli setup -l es
+o
+>>> pmvcs-cli setup -language es
 ```
 
 ### Configuración desde la consola en inglés
@@ -30,6 +39,10 @@ o
 >>> python -m pmvcs.cli setup -l en
 o
 >>> python -m pmvcs.cli setup -language en
+o
+>>> pmvcs-cli setup -l en
+o
+>>> pmvcs-cli setup -language en
 ```
 
 
