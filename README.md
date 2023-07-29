@@ -173,6 +173,41 @@ class ExampleHelper(BaseHelper):
 ```
 
 
+### Custom Helpers: Pass variables:
+
+In __init__ it should have:
+
+```
+def __init__(self, **kwargs) -> None:
+	self.pmvcs_helper = kwargs['pmvcs_helper']
+	self.kwargs = { 'pmvcs_cfg': kwargs['pmvcs_cfg'],
+					'pmvcs_lang': kwargs['pmvcs_lang'],
+					'pmvcs_helper': kwargs['pmvcs_helper']}
+						
+```
+
+And in the function that calls the helper:
+
+```
+def to_string_table(self, data: dict) -> str:
+	kwargs2 = { 'data': data,
+				'file_name': 'temp_file'}
+	kwargs2.update(self.kwargs)
+	table_helper = self.pmvcs_helper.load_helper('table', **kwargs2)
+	table_helper.record_file()
+```
+
+Finally in the helper we retrieve the values as:
+
+```
+def __init__(self, **kwargs) -> None:
+	super().__init__(**kwargs)
+	
+	self._data = kwargs['data']
+	self._file_name = f"{kwargs['file_name']}.{self._file_extension}"
+```
+
+
 ### Get configuration constants from config.ini:
 
 Get a configuration constant in string type from "OPTIONS":

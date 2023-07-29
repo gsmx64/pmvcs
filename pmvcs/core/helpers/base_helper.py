@@ -17,15 +17,16 @@ class BaseHelper(AbstractBaseHelper):
         else:
             kwargs['pmvcs_router'] = None
 
-    def load_helper(self, helper_name: str, is_pmvcs=False) -> object:
+    def load_helper(self, helper_name: str, is_pmvcs=False, **kwargs) -> object:
         """
         Loads a helper
         """
-        kwargs = {'pmvcs_cfg': self.pmvcs_cfg,
+        kwargs2 = {'pmvcs_cfg': self.pmvcs_cfg,
                   'pmvcs_lang': self.pmvcs_lang,
                   'pmvcs_helper': self}
+        kwargs2.update(kwargs)
         return self.pmvcs_router.import_module(
-            helper_name, 'Helper', is_pmvcs, **kwargs)
+            helper_name, 'Helper', is_pmvcs, **kwargs2)
 
     @staticmethod
     def test() -> str:
