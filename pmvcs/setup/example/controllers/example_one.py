@@ -9,7 +9,7 @@ class ExampleOneController(BaseController):
 
     def __init__(self, **kwargs) -> None:
         """
-        Init ExampleOne Controller requirements
+        Init Example One Controller requirements
         """
         super().__init__(**kwargs)
 

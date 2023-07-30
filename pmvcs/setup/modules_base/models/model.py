@@ -1,4 +1,4 @@
-""" Students By City Model file for PMVCS APP """
+""" Example One Model file for PMVCS APP """
 from app.models.base_model import BaseModel
 
 

@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "pmvcs"
-version = "1.0.2"
+version = "1.0.3"
 readme = "README.md"
 authors = [
   { name="Gonzalo Mahserdjian", email="gsmx64@outlook.com" },
