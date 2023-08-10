@@ -1,6 +1,9 @@
 @ECHO OFF
 ECHO -----------------------------------------
-ECHO Runing App Example
+ECHO Runing App
 ECHO -----------------------------------------
-python app.py
-pause
+env\Scripts\python app.py
+IF ERRORLEVEL 1 goto finish
+
+:finish
+PAUSE

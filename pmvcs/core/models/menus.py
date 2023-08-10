@@ -22,7 +22,7 @@ class Menus(Parser):
         return self._tag
 
     @tag.setter
-    def tag(self, tag='en') -> None:
+    def tag(self, tag: str = 'en') -> None:
         """
         Set default language name tag, (en) for default
         """

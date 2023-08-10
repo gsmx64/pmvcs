@@ -4,11 +4,11 @@
 
 Python MVC Shell Framework Package (PMVCS) is a tiny framework for shell projects making in Python.
 
-![PMVCS intro language selection](/docs/images/pmvcs-intro-language.png)
+![PMVCS intro language selection](https://raw.githubusercontent.com/gsmx64/pmvcs/main/docs/images/pmvcs-intro-language.png)
 
-![PMVCS menus for multiple modules](/docs/images/pmvcs-en-menus.png)
+![PMVCS menus for multiple modules](https://raw.githubusercontent.com/gsmx64/pmvcs/main/docs/images/pmvcs-en-menus.png)
 
-![PMVCS runing module](/docs/images/pmvcs-en-runing-module.png)
+![PMVCS runing module](https://raw.githubusercontent.com/gsmx64/pmvcs/main/docs/images/pmvcs-en-runing-module.png)
 
 ### Install with pip3
 
@@ -342,6 +342,11 @@ This inserts a select an input():
 Code: >>> self.pmvcs_view.input_generic(text)
 ```
  
+
+## PMVCS implementation examples
+
+* [PMVCS Examples](https://github.com/gsmx64/pmvcs/tree/main/examples)
+
 
 ## Repository
 

@@ -1,6 +1,9 @@
 @ECHO OFF
 ECHO -----------------------------------------
-ECHO Runing Package Cli mode
+ECHO Runing Package CLI
 ECHO -----------------------------------------
-python -m pmvcs.cli setup -l es
-pause
+env\Scripts\python -m pmvcs.cli setup -l es
+IF ERRORLEVEL 1 goto finish
+
+:finish
+PAUSE

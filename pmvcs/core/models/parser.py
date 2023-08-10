@@ -65,7 +65,7 @@ class Parser(BaseModel):
 
         return parser
 
-    def get(self, key, section=None, types='str') -> str:
+    def get(self, key: str, section: str = None, types: str = 'str') -> str:
         """
         Gets a data value from a given key
         """
@@ -93,7 +93,7 @@ class Parser(BaseModel):
 
         return self.data.get(section, key).replace("\\n", "\n")
 
-    def to_dict(self, read_dict=False) -> dict:
+    def to_dict(self, read_dict: bool = False) -> dict:
         """
         Returns data to dictionary
         """

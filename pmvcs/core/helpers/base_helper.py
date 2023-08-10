@@ -17,7 +17,7 @@ class BaseHelper(AbstractBaseHelper):
         else:
             kwargs['pmvcs_router'] = None
 
-    def load_helper(self, helper_name: str, is_pmvcs=False, **kwargs) -> object:
+    def load_helper(self, helper_name: str, is_pmvcs: bool = False, **kwargs) -> object:
         """
         Loads a helper
         """

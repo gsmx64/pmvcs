@@ -11,7 +11,7 @@ class FiltersHelper(BaseHelper):
         """
         super().__init__(**kwargs)
 
-    def float_int(self, value: float | int):
+    def float_int(self, value: float | int) -> float | int | TypeError:
         """
         Returns a float or int value
         """

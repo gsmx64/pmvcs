@@ -29,7 +29,7 @@ class Language(Parser):
         return self._tag
 
     @tag.setter
-    def tag(self, tag='en') -> None:
+    def tag(self, tag: str = 'en') -> None:
         """
         Set default language name tag, (en) for default
         """
@@ -64,13 +64,13 @@ class Language(Parser):
         """
         self._file_path = self._set_file_path
 
-    def sprintf(self, text, *args, **kwargs) -> str:
+    def sprintf(self, text: str, *args, **kwargs) -> str:
         """
         Return a formatted string
         """
         return self.get(text).format(*args, **kwargs)
 
-    def translate(self, text) -> str:
+    def translate(self, text: str) -> str:
         """
         Return a translated string
         """

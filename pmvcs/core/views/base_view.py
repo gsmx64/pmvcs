@@ -34,7 +34,7 @@ class BaseView(AbstractBaseView):
         self.clean_screen()
         return f' >>> {self.lang.get("LANG_EXIT_PROGRAM")} \n'
 
-    def line_brake(self, prints=True) -> str:
+    def line_brake(self, prints: bool = True) -> str | None:
         """
         Function to get a linebrake in view
         """
@@ -78,7 +78,7 @@ class BaseView(AbstractBaseView):
         """
         return input(text)
 
-    def input_language(self, text_options) -> str:
+    def input_language(self, text_options: str) -> str:
         """
         Returns the select option input
         """

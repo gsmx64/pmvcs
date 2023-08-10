@@ -47,7 +47,7 @@ class Router(AbstractRouter):
 
         self.controller = self._get_controller(**kwargs)
 
-    def create_app(self, task='default') -> None:
+    def create_app(self, task: str = 'default') -> None:
         """
         Routes the app
         """
@@ -86,8 +86,8 @@ class Router(AbstractRouter):
             return module_name
         return ''.join(i.capitalize() for i in splited[0:])
 
-    def import_module(self, module_name,
-                       module_subfix='Controller', is_pmvcs=False, **kwargs):
+    def import_module(self, module_name: str,
+                       module_subfix:str = 'Controller', is_pmvcs: bool = False, **kwargs):
         """
         Imports the module
         """

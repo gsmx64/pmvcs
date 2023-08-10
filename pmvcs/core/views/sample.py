@@ -92,7 +92,9 @@ class SampleView(AbstractSampleView):
                        f'   -> ({self.sample.get("SAMPLE_PMVCS_VIEW_GENERIC")})',
                        evals=False)
 
-    def test_view(self, test: str, note='', value='', evals=True) -> str:
+    def test_view(self, test: str, note: str = '',
+                  value: str | bool | int | float = '',
+                  evals: bool = True) -> str:
         """
         Returns code test view
         """
