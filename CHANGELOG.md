@@ -22,6 +22,7 @@ Legend:
 			^ Examples to check code implementation
 			- Removed cmd scripts not related to production stage
 ```
+```
 1.0.2 ---> 	+ Added kwargs to by pass variables into the helpers
 ```
 ```
