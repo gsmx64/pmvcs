@@ -1,16 +1,14 @@
 # Python MVC Shell Framework Package
 
-## Sobre el paquete
+## Sobre el paquete:
 
-Python MVC Shell Framework Package (PMVCS) es un pequeño framework para proyectos en shell realizados en Python.
+Python MVC Shell Framework Package (PMVCS) es un pequeño framework para proyectos en shell realizados en Python 3.10+.
 
-![PMVCS inicio selección de idioma](https://raw.githubusercontent.com/gsmx64/pmvcs/main/docs/images/pmvcs-intro-language.png)
+![PMVCS](https://raw.githubusercontent.com/gsmx64/pmvcs/main/docs/images/pmvcs-logo-big.png)
 
-![PMVCS menus para múltiples módulos](https://raw.githubusercontent.com/gsmx64/pmvcs/main/docs/images/pmvcs-es-menus.png)
 
-![PMVCS corriendo un módulo](https://raw.githubusercontent.com/gsmx64/pmvcs/main/docs/images/pmvcs-es-runing-module.png)
 
-### Instalar con pip3
+### Instalar con pip3:
 
 ```
 pip install pmvcs
@@ -21,7 +19,7 @@ pip3 install pmvcs
 ```
 
 
-### Configuración desde la consola en español
+### Configuración desde la consola en español:
 
 ```
 >>> python -m pmvcs.cli setup -l es
@@ -33,7 +31,7 @@ o
 >>> pmvcs-cli setup -language es
 ```
 
-### Configuración desde la consola en inglés
+### Configuración desde la consola en inglés:
 
 ```
 >>> python -m pmvcs.cli setup -l en
@@ -93,8 +91,8 @@ Presione una tecla para continuar . . .
 
 ### Agrega más Múltiples módulos
 
-Instala nuevos múltiples achivos del módulo en el menú con controlador, modelo y vista cada uno.
-Para agregar nuevos módulo en el menú, ejecuta lo siguiente:
+Instala nuevos múltiples archivos del módulo en el menú con controlador, modelo y vista.
+Para agregar nuevos módulos en el menú, ejecuta lo siguiente:
 
 ```
 >>> python -m pmvcs.cli menu -l es
@@ -173,7 +171,7 @@ class ExampleHelper(BaseHelper):
 ```
 
 
-### Ayudantes Personalizados: Pasar variables:
+### Ayudantes Personalizados: Pasar variables
 
 En el __init__ debería tener:
 
@@ -197,7 +195,7 @@ def to_string_table(self, data: dict) -> str:
 	table_helper.record_file()
 ```
 
-Finalmente en el ayudante recuperamos los valores como:
+Finalmente, en el ayudante recuperamos los valores como:
 
 ```
 def __init__(self, **kwargs) -> None:
@@ -231,7 +229,7 @@ Retorna: 8
 Tipo de Valor: <class 'int'>
 ```
 
-Obtiene una constante de configuración en tipo flotate:
+Obtiene una constante de configuración en tipo flotante:
 ```
 Código: >>> self.cfg.get("EXAMPLE_FLOAT", "OPTIONS", "float")
 Retorna: 1.57
@@ -294,7 +292,8 @@ Tipo de Valor: <class 'str'>
 
 Traduciendo una cadena:
 ```
-Código: >>> self.lang.translate(value)   -> value = 'dictionary'
+Código: >>> value = 'dictionary'
+		>>> self.lang.translate(value)
 Retorna: Dictionary
 Tipo de Valor: <class 'str'>
 ```
@@ -340,6 +339,15 @@ Esto inserta un input():
 ```
 Código: >>> self.pmvcs_view.input_generic(text)
 ```
+
+
+## PMVCS en imágenes
+
+![PMVCS inicio selección de idioma](https://raw.githubusercontent.com/gsmx64/pmvcs/main/docs/images/pmvcs-intro-language.png)
+
+![PMVCS menus para múltiples módulos](https://raw.githubusercontent.com/gsmx64/pmvcs/main/docs/images/pmvcs-es-menus.png)
+
+![PMVCS corriendo un módulo](https://raw.githubusercontent.com/gsmx64/pmvcs/main/docs/images/pmvcs-es-runing-module.png)
 
 
 ## Ejemplos de implementación de PMVCS

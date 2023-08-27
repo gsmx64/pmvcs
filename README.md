@@ -2,13 +2,10 @@
 
 ## About the package
 
-Python MVC Shell Framework Package (PMVCS) is a tiny framework for shell projects making in Python.
+Python MVC Shell Framework Package (PMVCS) is a tiny framework for shell projects making in Python 3.10+.
 
-![PMVCS intro language selection](https://raw.githubusercontent.com/gsmx64/pmvcs/main/docs/images/pmvcs-intro-language.png)
+![PMVCS](https://raw.githubusercontent.com/gsmx64/pmvcs/main/docs/images/pmvcs-logo-big.png)
 
-![PMVCS menus for multiple modules](https://raw.githubusercontent.com/gsmx64/pmvcs/main/docs/images/pmvcs-en-menus.png)
-
-![PMVCS runing module](https://raw.githubusercontent.com/gsmx64/pmvcs/main/docs/images/pmvcs-en-runing-module.png)
 
 ### Install with pip3
 
@@ -294,7 +291,8 @@ Value Type: <class 'str'>
 
 Translating a string:
 ```
-Code: >>> self.lang.translate(value)   -> value = 'dictionary'
+Code: >>> value = 'dictionary'
+	  >>> self.lang.translate(value)
 Returns: Dictionary
 Value Type: <class 'str'>
 ```
@@ -342,6 +340,15 @@ This inserts a select an input():
 Code: >>> self.pmvcs_view.input_generic(text)
 ```
  
+ 
+ ## PMVCS en imágenes
+ 
+![PMVCS intro language selection](https://raw.githubusercontent.com/gsmx64/pmvcs/main/docs/images/pmvcs-intro-language.png)
+
+![PMVCS menus for multiple modules](https://raw.githubusercontent.com/gsmx64/pmvcs/main/docs/images/pmvcs-en-menus.png)
+
+![PMVCS runing module](https://raw.githubusercontent.com/gsmx64/pmvcs/main/docs/images/pmvcs-en-runing-module.png)
+
 
 ## PMVCS implementation examples
 
