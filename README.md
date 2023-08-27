@@ -341,7 +341,7 @@ Code: >>> self.pmvcs_view.input_generic(text)
 ```
  
  
- ## PMVCS en imágenes
+ ## PMVCS captures
  
 ![PMVCS intro language selection](https://raw.githubusercontent.com/gsmx64/pmvcs/main/docs/images/pmvcs-intro-language.png)
 
