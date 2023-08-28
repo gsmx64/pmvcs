@@ -14,13 +14,6 @@ class AbstractRouter(ABC):
         pass
 
     @abstractmethod
-    def _get_module_name(self, module_name: str) -> str:
-        """
-        Returns module name in string
-        """
-        pass
-
-    @abstractmethod
     def _get_module_camelcase(self, module_name: str) -> str:
         """
         Returns module class name in CamelCase

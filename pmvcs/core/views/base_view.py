@@ -19,7 +19,7 @@ class BaseView(AbstractBaseView):
     @decorate_intro(num_lines=3)
     def get_intro(self, dummy='') -> str:
         """
-        Function to get intro view message
+        Returns intro view message
         """
         title = self.cfg.get("DEFAULT_TITLE", "DEFAULT")
         padding_left = self.cfg.get("PADDING_LEFT", "DEFAULT", "int")
@@ -29,14 +29,14 @@ class BaseView(AbstractBaseView):
     @decorate_intro(num_lines=1)
     def get_exit(self, dummy='') -> str:
         """
-        Function to get exit view message
+        Returns exit view message
         """
         self.clean_screen()
         return f' >>> {self.lang.get("LANG_EXIT_PROGRAM")} \n'
 
     def line_brake(self, prints: bool = True) -> str | None:
         """
-        Function to get a linebrake in view
+        Retuns a linebrake in view
         """
         if prints:
             print('\n', end='')
@@ -56,13 +56,13 @@ class BaseView(AbstractBaseView):
 
     def input_start(self) -> str:
         """
-        Returns the select option input
+        Returns the intro input with pause
         """
         return input(f'{self.lang.get("LANG_INPUT_PRESS_A_KEY_START")} ')
 
     def input_pause(self) -> str:
         """
-        Returns the intro press a key pause
+        Returns the input press a key with pause
         """
         return input(f'{self.lang.get("LANG_INPUT_PRESS_A_KEY_CONTINUE")} ')
 
@@ -74,13 +74,13 @@ class BaseView(AbstractBaseView):
 
     def input_generic(self, text: str) -> str:
         """
-        Returns the pause option to repeat binary search
+        Returns a generic input with passed legend
         """
         return input(text)
 
     def input_language(self, text_options: str) -> str:
         """
-        Returns the select option input
+        Returns the select language input
         """
         return input(f'{self.lang.sprintf("LANG_SELECT_LANGUAGE", text_options)} ')
 

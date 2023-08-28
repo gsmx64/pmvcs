@@ -61,6 +61,28 @@ class Router(AbstractRouter):
                 configparser.Error) as error:
             print(self._error(error))
         return ''
+    
+    def get_providers(self, mode: str) -> dict:
+        """
+        Return Providers
+        """
+        kwargs = {'pmvcs_lang': self.lang,
+                  'pmvcs_cfg': self.cfg,
+                  'pmvcs_about': self.about}
+        if mode == 'basic': return kwargs
+        
+        kwargs['pmvcs_view'] = self.view
+        if mode == 'basic_view': return kwargs
+
+        kwargs['pmvcs_helper'] = self.helper
+        if mode == 'basic_helper': return kwargs
+
+        kwargs['pmvcs_model'] = self.model        
+        kwargs['pmvcs_router'] = self
+        kwargs['pmvcs_menus_model'] = self.menus_model
+        if mode == 'full': return kwargs
+
+        return kwargs        
 
     def _error(self, error: str) -> str:
         error_message = f'[>>>] {error}'
@@ -70,12 +92,6 @@ class Router(AbstractRouter):
             error_message += f'[>>>] {traceback.print_tb(error.__traceback__)}'
             return error_message
         return ''
-
-    def _get_module_name(self, module_name: str) -> str:
-        """
-        Returns module name in string
-        """
-        return str(module_name)
 
     def _get_module_camelcase(self, module_name: str) -> str:
         """
