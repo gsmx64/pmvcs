@@ -17,7 +17,8 @@ Legend:
 
 
 ```
-1.0.4-dev --->  + Added some Unittests 
+1.0.4-dev --->  + Added new method get_providers for return kwargs of config, language, etc, only in use for unittest
+                + Added some Unittests 
                 ^ Edited some docstrings
                 - Removed old method not in use in router.py (also in abstract class)
                 + Added image with logo in README.md and README.ES.md, moved the images to another part of that files
@@ -40,5 +41,5 @@ Legend:
             + Added changelog in markdown format.
 ```
 ```
-1.0.0 ---> 	Initial release
+1.0.0 --->  + Initial release
 ```

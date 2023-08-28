@@ -1,14 +1,12 @@
 """ Test file for Python MVC Shell Framework Package """
 import unittest, os
 
-from pathlib import Path
-
 from pmvcs.core.router import Router
 from pmvcs.core.models.parser import Parser
 
 
 class TestParser(unittest.TestCase):
-    """ Class for unittest Test Pmvcs """
+    """ Class for unittest Test Parser """
 
     def setUp(self):
         """
