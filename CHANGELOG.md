@@ -17,13 +17,14 @@ Legend:
 
 
 ```
-1.0.4-dev --->  + Added new method get_providers for return kwargs of config, language, etc, only in use for unittest
-                + Added some Unittests 
-                ^ Edited some docstrings
-                - Removed old method not in use in router.py (also in abstract class)
-                + Added image with logo in README.md and README.ES.md, moved the images to another part of that files
-                ^ Fixed small typo in CHANGELOG.md file
-                + Added __main__.py and app.py in app folder and setup to run app project as module 
+1.0.4 --->  + Added empty file in dejo example, because  github not upload it if is empty
+            + Added new method get_providers for return kwargs of config, language, etc, only in use for unittest
+            + Added some Unittests 
+            ^ Edited some docstrings
+            - Removed old method not in use in router.py (also in abstract class)
+            + Added image with logo in README.md and README.ES.md, moved the images to another part of that files
+            ^ Fixed small typo in CHANGELOG.md file
+            + Added __main__.py and app.py in app folder and setup to run app project as module 
 ```
 ```
 1.0.3 --->  # Modified some comments and small typos
