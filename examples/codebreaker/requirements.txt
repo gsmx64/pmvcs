@@ -15,7 +15,7 @@ nodeenv==1.8.0
 packaging==23.1
 platformdirs==3.5.1
 pluggy==1.0.0
-pmvcs==1.0.1
+pmvcs==1.0.4
 pre-commit==3.3.2
 pycodestyle==2.10.0
 pyflakes==3.0.1
